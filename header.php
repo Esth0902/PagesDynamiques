@@ -15,14 +15,12 @@ $menu = [["/index.php","Accueil"],["/contact.php","Contact"], ["/connexionForm.p
 <body>
 <header>
     <nav>
-        <!-- Bouton hamburger -->
-        <button id="mainMenu-btn-toggleCollapse" aria-controls="mainMenu" aria-expanded="false" aria-label="Afficher le menu">
-            <span></span><span></span><span></span>
-        </button>
-
-        <!-- menu hamburger -->
-        <div id="mainMenu" class="menu">
-            <ul>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+            <ul class="menu" id="menu">
                 <?php
                 foreach($menu as $item){
                     $activeClass = ($_SERVER["REQUEST_URI"] == $item[0]) ? "class='active'" : "";
@@ -32,11 +30,10 @@ $menu = [["/index.php","Accueil"],["/contact.php","Contact"], ["/connexionForm.p
                 }
                 ?>
             </ul>
-        </div>
     </nav>
 </header>
 <main>
-<script defer src="./js/app.js"></script>
+<script type="module" defer src="./js/app.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 

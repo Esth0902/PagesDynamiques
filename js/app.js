@@ -10,3 +10,7 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 
+import { HamburgerMenu } from "./modules/Burger.js";
+document.addEventListener("DOMContentLoaded", () => {
+    new HamburgerMenu("#menu-toggle", "#menu");
+})

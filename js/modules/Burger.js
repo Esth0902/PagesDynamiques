@@ -1,51 +1,21 @@
-let btn = null;
 
-function openMenu() {
-    if (!btn) return;
-    btn.setAttribute("aria-expanded", "true");
-    btn.setAttribute("aria-label", "Cacher le menu");
-}
-
-function closeMenu() {
-    if (!btn) return;
-    btn.setAttribute("aria-expanded", "false");
-    btn.setAttribute("aria-label", "Afficher le menu");
-}
-
-const handleBtnClick = (e) => {
-    e.preventDefault();
-    if (!btn) return;
-
-    if (btn.getAttribute('aria-expanded') === "false") {
-        openMenu();
-    } else {
-        closeMenu();
-    }
-};
-
-const handleWindowKeyDown = (e) => {
-    if (e.key === "Escape" || e.key === "Esc") {
-        e.preventDefault();
-        if (!btn) return;
-
-        btn.focus();
-        closeMenu();
-    }
-};
-
-function initMenuBurger(buttonElement) {
-    if (!buttonElement) {
-        console.error("Erreur : Aucun bouton trouvé pour initMenuBurger !");
-        return;
+export class HamburgerMenu {
+    constructor(menuToggleSelector, menuSelector) {
+        this.menuToggle = document.querySelector(menuToggleSelector);
+        this.menu = document.querySelector(menuSelector);
+        this.init();
     }
 
-    btn = buttonElement;
+    init() {
+        if (this.menuToggle && this.menu) {
+            this.menuToggle.addEventListener("click", () => this.toggleMenu());
+        }
+    }
 
-    closeMenu();
-
-    btn.addEventListener('click', handleBtnClick);
-    window.addEventListener('keydown', handleWindowKeyDown);
+    toggleMenu() {
+        this.menu.classList.toggle("active");
+        this.menuToggle.classList.toggle("open");
+    }
 }
 
-export { initMenuBurger };
 
