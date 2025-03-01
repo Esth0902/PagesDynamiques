@@ -1,0 +1,132 @@
+/* ---- Navigation principale ---- */
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+
+              /* Aligne le contenu de la barre de navigation à gauche */
+               /* Ajoute un espace de 20px en haut et en bas de la navigation */
+    border-bottom: 1px solid #333;   /* Ajoute une ligne en bas pour séparer la navigation du reste de la page */
+    padding-top: 10px;
+}
+
+nav ul {
+    list-style: none;                /* Supprime les puces de la liste */
+    padding: 0;                      /* Supprime le padding interne de la liste */
+    margin: 0;                       /* Supprime le margin externe de la liste */
+    display: flex;                   /* Utilise le flexbox pour aligner les éléments horizontalement */
+    gap: 10%;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;           /* Supprime le soulignement des liens */
+    color: #333;                     /* Définit la couleur des liens */
+    font-size: 1.3rem;               /* Définit une taille de texte de 1.3 rem pour les liens */
+    font-weight: bold;               /* Met le texte des liens en gras */
+}
+
+a {
+    text-decoration: none;           /* Supprime le soulignement des liens */
+    color: #333;                     /* Définit la couleur des liens */
+    font-size: 1.3rem;               /* Définit une taille de texte de 1.3 rem pour les liens */
+    font-weight: bold;               /* Met le texte des liens en gras */
+}
+
+
+nav ul li a:hover {
+    color: rgba(142, 3, 19, 0.8);    /* Change la couleur du texte au survol */
+    text-decoration: underline;      /* Ajoute un soulignement au texte des liens lors du survol */
+}
+
+.active {
+    color: rgba(142, 3, 19, 0.8);    /* Définit la couleur du lien actif dans la navigation */
+}
+
+
+/* ---- Formulaire ---- */
+form {
+    width: 50%;                     /* Formulaire prend toute la largeur disponible */
+    max-width: 600px;
+    min-width: 400px;/* Limite la largeur maximale du formulaire à 600px */
+}
+
+fieldset {
+    border: 1px solid #ccc;          /* Ajoute une bordure grise autour du groupe de champs */
+    padding: 10px;                   /* Ajoute un padding de 10px autour des champs à l’intérieur du fieldset */
+}
+
+p {
+    margin-bottom: 10px;             /* Ajoute un espace de 10px en bas des paragraphes */
+}
+
+label {
+    display: block;                  /* Affiche les labels en bloc pour qu'ils soient au-dessus des champs */
+    font-weight: bold;               /* Met le texte du label en gras */
+    margin-bottom: 5px;              /* Ajoute un espace de 5px en bas des labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+
+textarea {
+    min-height: 100px;               /* Définit une hauteur minimale pour la zone de texte */
+    resize: vertical;                /* Autorise la redimensionnement vertical de la zone de texte */
+}
+
+input[type="submit"] {
+    background-color: rgba(163, 105, 113, 0.8); /* Couleur de fond du bouton d’envoi */
+    color: white;                    /* Couleur du texte sur le bouton */
+    border: none;                    /* Supprime la bordure par défaut */
+    padding: 10px 20px;              /* Ajoute un padding de 10px en haut/bas et 20px sur les côtés */
+    font-size: 1rem;                 /* Définit la taille du texte */
+    cursor: pointer;                 /* Change le curseur pour pointer */
+    border-radius: 5px;              /* Ajoute des coins arrondis au bouton */
+    transition: background-color 0.3s; /* Ajoute une transition de couleur de fond en 0.3s */
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(142, 3, 19, 0.8); /* Change la couleur de fond du bouton au survol */
+}
+
+body {
+    min-height: 100%;
+}
+/* ---- Pied de page ---- */
+.footer {
+    background-color: #333;          /* Couleur de fond sombre pour le pied de page */
+    color: #fff;                     /* Texte en blanc */
+    text-align: center;              /* Aligne le texte au centre du pied de page */
+    font-size: 0.9rem;
+    position : absolute;
+    bottom : 0;
+    left: 0;
+    width: 100%;
+}
+
+.swiper {
+    width: 30%;
+    max-width: 400px;
+    height: 150px;
+    position: relative;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
