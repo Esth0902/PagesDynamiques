@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'DB.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'session.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'Validation.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'DB.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'session.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'Validation.php';
 
 // Traitement du formulaire si des données sont soumises
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

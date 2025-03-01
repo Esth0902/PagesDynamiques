@@ -3,8 +3,9 @@
 $metaDescription = "Inscription";
 $pageTitre = "Inscription";
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'header.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'traitementFormInscription.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'session.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . 'traitementFormInscription.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'session.php';
+
 if (estconnecte()){
     header('Location: index.php');
 }

@@ -63,22 +63,6 @@ function estconnecte()
     else {return false;}
 }
 
-function getJokes() {
-    // L'URL de l'API JokeAPI pour récupérer des blagues
-    $apiUrl = "https://v2.jokeapi.dev/joke/Any?type=single&amount=5";  // Changez les paramètres si nécessaire
-
-    // Utiliser file_get_contents pour récupérer les données de l'API
-    $response = file_get_contents($apiUrl);
-    $data = json_decode($response, true);
-
-    // Vérifier si l'API a retourné des blagues
-    if (isset($data['jokes'])) {
-        return $data['jokes'];
-    }
-
-    return [];
-}
-
 ?>
 
 
