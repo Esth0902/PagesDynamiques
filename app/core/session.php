@@ -5,14 +5,15 @@ ini_set('session.cookie_secure', 1);
 ini_set('session.use_only_cookies', 1);
 session_start();
 
-function generateCSRFToken() {
+if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    return $_SESSION['csrf_token'];
 }
 
 function validateCSRFToken() {
+
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-        die("Erreur CSRF : requête invalide !");}
+        die("Erreur CSRF : requête invalide !");
+    }
 }
 
 function validateRequestRate() {

@@ -63,7 +63,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'mode
         <div id="messageError" style="color: rgba(142, 3, 19, 0.8);">
             <?php echo (isset($errors['message']) ? htmlspecialchars($errors['message']) : ''); ?>
         </div>
-        <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
         <input type = "submit" value = "Envoyer" />
     </p>

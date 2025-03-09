@@ -1,9 +1,9 @@
 <?php
-
 $metaDescription = "Connexion";
 $pageTitre = "Connexion";
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'header.php';
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . 'traitementFormConnexion.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR . 'session.php';
 if (estconnecte()){
     header('Location: index.php');
 }
@@ -31,7 +31,7 @@ if (estconnecte()){
             <label for="connexionMotDePasse">Mot de passe* : </label>
             <input type="password" id="connexionMotDePasse" name="connexionMotDePasse" required minlength="8" maxlength="72"
         </p>
-        <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
         <p>
             <input type = "submit" value = "Envoyer" />

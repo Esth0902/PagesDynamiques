@@ -62,8 +62,7 @@ if (estconnecte()){
         <div id="nomError" style="color: rgba(142,3,19,0.8);">
             <?php echo (isset($errorsInsc['inscriptionMotDePasseConfirmation']) ? htmlspecialchars($errorsInsc['inscriptionMotDePasseConfirmation']) : ''); ?>
         </div>
-        <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
-
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         <p>
         <input type = "submit" value = "Envoyer" />
         </p>
